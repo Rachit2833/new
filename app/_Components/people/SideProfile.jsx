@@ -2,10 +2,13 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 function SideProfile() {
    const [isNameInput,setIsNameInput]= useState(false)
+   const pathName = usePathname();
+   const id = pathName.split('/').pop(); // Gets the last part of the path
    return (
      
       <div className="flex p-2 gap-2 w-[35%] items-center">
@@ -39,7 +42,7 @@ function SideProfile() {
                      }}
                      className="text-[royalblue] cursor-pointer"
                   >
-                     Add a name
+         {id.split("_")[0]==="Person"?"Add a name": id}
                   </h1>
                   <p className="text-slate-500">Find them fast by name with search</p>
                </div>

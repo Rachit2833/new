@@ -21,11 +21,13 @@ import { Download, ListFilter } from "lucide-react";
 import DrawerClick from "@/app/_Components/DrawerClick";
 import SideProfile from "@/app/_Components/people/SideProfile";
 import PasteCards from "@/app/_Components/Albums/PasteCards";
+import ImageDetect from "@/app/_Components/ImageDetect";
 
-// Make sure to import all required images
 
 
-function page() {
+
+async function page() {
+
   return (
     <>
       <div className="flex items-center">
@@ -73,7 +75,7 @@ function page() {
           <SideProfile />
         </CardHeader>
         <CardContent>
-          <PasteCards />
+          <ImageDetect  />
         </CardContent>
         <CardFooter></CardFooter>
       </Card>

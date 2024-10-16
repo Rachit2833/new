@@ -6,15 +6,8 @@ import { Download, ListFilter } from "lucide-react"
 import DrawerClick from "./DrawerClick"
 import MainSlide from "./MainSlide"
 
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import Image from "next/image";
-import { useEffect } from "react"
-import { useUser } from "../_lib/context"
 
 function Wrapper() {
-
-  
-   
    return (
      
         <>

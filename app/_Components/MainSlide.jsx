@@ -1,9 +1,7 @@
 "use client"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle,CardFooter } from "@/components/ui/card";
-import { Tabs, TabsContent } from "@radix-ui/react-tabs";
-import { Suspense, useState } from "react";
-import ImageCard from "./ImageCard";
-import Uploadcard from "./UploadCard";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { TabsContent } from "@radix-ui/react-tabs";
+import { Suspense } from "react";
 import PasteCards from "./Albums/PasteCards";
 
 

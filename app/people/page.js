@@ -7,12 +7,18 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
- // Make sure to import all required images
+import * as faceapi from "@vladmandic/face-api";
 import Friends from "../_Components/people/Friends";
 
+ const checkLabels = async () => {
 
-function Page() {
-
+   const response = await fetch("http://localhost:2833/labels");
+   const storedDescriptors = await response.json();
+    return storedDescriptors
+ };
+async function Page() {
+  let people =  await checkLabels();
+  console.log(people);
 
   return (
     <Card>
@@ -24,8 +30,8 @@ function Page() {
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
-        <Friends />
-        <Friends />
+        <Friends people={people} />
+
       </CardContent>
       <CardFooter></CardFooter>
     </Card>

@@ -1,6 +1,6 @@
 
 import Wrapper from "./_Components/Wrapper"
-import useFaceApi from "./hooks/FaceApi";
+
 
 
 
